@@ -5,8 +5,10 @@ import {
   } from '../actions/types';
   
   const initialState = {
-    items: [],
-    loading: false
+    color: "red",
+    dirty: true,
+    remainingBites: 7
+
   };
   
   export default function(state = initialState, action) {
@@ -19,12 +21,12 @@ import {
       case EAT:
         return {
           ...state,
-          remainingBites: Math.max(0, remainingBites - action.remainingBites)
+          remainingBites: (state.remainingBites - action.bites)
         };
       case ROT:
         return {
           ...state,
-          color: gray 
+          color: "brown" 
         };
       default:
         return state;
