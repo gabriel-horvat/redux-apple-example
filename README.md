@@ -6,3 +6,8 @@ Understand Redux by using a plain apple as an example.
 
 
 
+Make it run on your local machine:
+
+```npm install
+npm start
+```
